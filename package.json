@@ -1,0 +1,11 @@
+{
+  "name": "parking-tracker-backend",
+  "version": "1.0.0",
+  "description": "App to track where you last parked your car, and favorite spots.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christy Inman",
+  "license": "ISC"
+}
