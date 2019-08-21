@@ -5,9 +5,24 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('parking_spots').insert([
-        {id: 1, colName: 'rowValue1'},
-        {id: 2, colName: 'rowValue2'},
-        {id: 3, colName: 'rowValue3'}
+        {
+          id: 1, 
+          cross_streets: 'N. Clarkson & 10th',
+          day: '2019-08-20',
+          notes: 'parked on 10th near the alley'
+        },
+        {
+          id: 2, 
+          cross_streets: 'Platte & 17th',
+          day: '2019-07-26',
+          notes: 'on platte, meter runs out at noon'
+        },
+        {
+          id: 3, 
+          cross_streets: 'Blake & 38th',
+          day: '2019-08-21',
+          notes: 'on blake near the bridge stairs'
+        }
       ]);
     });
 };
