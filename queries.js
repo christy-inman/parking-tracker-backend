@@ -1,7 +1,7 @@
 const database = require('./database-connection')
 
 module.exports = {
-    listAll(){
+    allSpots(){
         return database('parking_spots')
     }
 }
