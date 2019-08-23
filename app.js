@@ -1,11 +1,13 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
+const bodyParser = require('body-parser')
 const port = process.env.PORT || 3000
 const queries = require('./queries')
 
 app.listen(port)
 app.use(cors())
+app.use(bodyParser.json())
 app.get('/', (request, response) => {
     queries.allSpots()
         .then(spots => response.json(spots))
@@ -16,5 +18,6 @@ app.get('/:id', (request, response) => {
 })
 app.post('/', (request, response) => {
     queries.createSpot(request.body)
+        .then(spot => response.json(spot))
 })
 console.log(`Listening on port ${port}`)

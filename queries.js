@@ -12,6 +12,7 @@ module.exports = {
             .where({id}).first()
     },
     createSpot(spot) {
+        console.log('yup')
         const spots = database('parking_spots')
         return spots.insert(spot)
     }
