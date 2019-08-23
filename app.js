@@ -18,6 +18,10 @@ app.get('/:id', (request, response) => {
 })
 app.post('/', (request, response) => {
     queries.createSpot(request.body)
-        .then(spot => response.json(spot))
+        .then(response.status(201))
+})
+app.delete('/:id', (request, response) => {
+    queries.deleteSpot(request.params.id)
+        .then(response.status(204))
 })
 console.log(`Listening on port ${port}`)

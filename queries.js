@@ -15,5 +15,9 @@ module.exports = {
         console.log('yup')
         const spots = database('parking_spots')
         return spots.insert(spot)
+    },
+    deleteSpot(id) {
+        const spots = database('parking_spots')
+        return spots.where({id}).delete()
     }
 }
