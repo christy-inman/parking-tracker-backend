@@ -21,7 +21,6 @@ app.post('/', (request, response) => {
         .then(response.status(201))
 })
 app.put('/:id', (request, response) => {
-    console.log('step 3')
     queries.updateSpot(request.params.id, request.body)
         .then(spot => response.json(spot))
 })

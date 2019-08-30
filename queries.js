@@ -11,7 +11,6 @@ module.exports = {
     },
     createSpot(spot) {
         spots = database('parking_spots')
-        console.log('yup')
         return spots.insert(spot)
     },
     updateSpot(id, spot) {
